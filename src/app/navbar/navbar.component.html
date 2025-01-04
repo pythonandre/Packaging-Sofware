@@ -1,0 +1,10 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<nav class="navbar" (toggleSidebar)="toggleSidebar()">
+  <app-sidebar [isOpen] = "sidebarOpen"></app-sidebar>
+  <div [ngClass]="{'overlay': sidebarOpen}" (click)="closeSidebar()"></div>
+  <button class="menu-button" (click)="toggleSidebar()">
+    <p>Menu</p> &nbsp;&nbsp;&nbsp;
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="title">MARCO H.</span>
+  </nav>

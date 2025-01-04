@@ -1,0 +1,32 @@
+<div class="box-container">
+    <div class="box">
+      <img src="../../assets/box.png" alt="Box Image" class="box-image">
+      <div class="box-content">
+        <div class="box-title">Servicio de empaquetamiento de bultos</div>
+        <div class="volume-slider-container">
+          <input type="range" min="20" max="200" step="10" [(ngModel)]="volume">
+          <div class="dropdown-container" style="position: relative; width: 200px;">
+            <button (click)="toggleDropdown()" class="dropdown-button">
+              {{ selectedOption || 'Sin protección adicional' }}
+            </button>
+            <ul *ngIf="dropdownOpen" class="dropdown-list" style="position: absolute; top: 100%; left: 0; right: 0; background: #fff; border: 1px solid #ccc; border-radius: 4px; z-index: 1000; list-style: none; padding: 0; margin: 0;">
+              <li
+                *ngFor="let option of options"
+                (click)="selectOption(option)"
+                class="dropdown-item"
+                style="padding: 8px; cursor: pointer;"
+              >
+                {{ option.label }}
+              </li>
+            </ul>
+          </div>
+          <div class="volume-value">{{ volume }} cm³</div>
+          <div class="volume-value">${{ volumePrice }} CLP</div>
+        </div>
+        <div>
+          <button (click)="onAddPackage()" class="button">Ingresar paquete al sistema</button>
+          <button (click)="onPackageTooLarge()" class="button">Mi paquete es más grande que 2m³</button>
+        </div>
+      </div>
+    </div>
+  </div>

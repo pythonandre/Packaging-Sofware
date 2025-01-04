@@ -1,0 +1,25 @@
+<div class="sidebar" [ngClass]="{'open': isOpen}">
+  <ng-content>
+    <br/><br/>
+    <ul>
+      <li><button (click)="openModal()">¿Quiénes somos?</button></li>
+    </ul>
+    <div class="footer">
+    <p class="wsp-image">Contactanos!</p>
+    <img src="../../assets/wsp.png" alt="Whatsapp Image" class="wsp-image"> 
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br/> <br/> +56900000000
+    </div>
+  </ng-content>
+</div>
+
+<!-- Modal -->
+<div *ngIf="isModalOpen" class="modal-overlay" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2>Somos Siroe.</h2>
+    <p>Nos dedicamos al empaquetamiento de bultos y su correcta transición y desplazamiento desde un punto a otro.</p>
+    <p>Envolvemos paquetes personalizados según las necesidades de nuestro cliente.</p>
+    <p>Te invitamos a probar nuestro dedicado servicio.</p>
+
+    <button (click)="closeModal()">Close</button>
+  </div>
+</div>

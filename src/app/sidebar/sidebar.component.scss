@@ -1,0 +1,63 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: none;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  display: block;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal-content {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+}
+
+button {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgreen;
+}
+
+.wsp-image {
+  max-width: 25%;
+}
+
+.footer {
+  margin-top: 250%;
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+
+}
